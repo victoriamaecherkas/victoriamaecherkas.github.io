@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/victoriamaecherkas/victoriamaecherkas.github.io#readme",
   "dependencies": {
+    "@lottiefiles/lottie-interactivity": "^0.1.3",
     "lottie-web": "^5.7.4"
   }
 }

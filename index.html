@@ -1,27 +1,52 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Victoria Cherkas</title>
-  <meta name="description" content="Victoria Cherkas">
-  <meta name="Victoria Cherkas" content="SitePoint">
+    <title>Victoria Cherkas</title>
+    <meta name="description" content="Victoria Cherkas">
+    <meta name="Victoria Cherkas" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
 
 </head>
 
 <body>
-  
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_k129xzhh.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 
 
-
-  <h1>
-    Victoria Cherkas
+    <div style="width: 100%; height: 200px; background:#567fe1; position:fixed;">
+        <h1>
+        Victoria Cherkas
     </h1>
 
+    <lottie-player style="width: 300px; height: 200px;" id="firstLottie" src="https://assets6.lottiefiles.com/packages/lf20_k129xzhh.json">"></lottie-player>
+
+    </div>
+
+
+    <div id="MyContainerId" style="width: 300px; height: 1000px;position: relative;top: 300px;"></div>
+
+    <!-- <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_k129xzhh.json" background="transparent" speed="1"
+        style="width: 300px; height: 300px;" loop autoplay></lottie-player> -->
+    <script>
+        LottieInteractivity.create({
+            mode:"scroll",
+            player:'#firstLottie',
+            container: "#MyContainerId",
+            actions: [
+                {
+                    visibility:[0,1],
+                    type: "seek",
+                    frames: [0, 90],
+                },
+            ]  
+        });
+        </script>
 </body>
+
 </html>
